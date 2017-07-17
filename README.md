@@ -42,7 +42,7 @@ replace_block code.txt /home/user/directory --search "*.php"
 replace_block code.txt --convert > code_regex.txt
 
 # You can then use the above code_regex.txt directly using --raw-regex
-replace_block code.txt /home/user/directory --search "*.php" --raw-regex
+replace_block code_regex.txt /home/user/directory --search "*.php" --raw-regex
 
 # You can also edit the code_regex.txt file to make your pattern more flexible
 vim code_regex.txt
