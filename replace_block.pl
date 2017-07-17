@@ -1,8 +1,6 @@
 #!/bin/perl
-# This script will perform a global replace of files which contain the block of text in --search-file
-#  - .eml rfc822 messages
-#  - .msg outlook messages
-#  - .vcf contacts
+# This script will perform a global replace of files which contain the block of text specified in your block file
+# The block file can contain regex per line (for the whole file)
 
 use POSIX 'strftime';
 use File::Basename;
@@ -78,7 +76,7 @@ foreach $file (split (/\n/,  `find "$source_dir" -type f -iname "$search"`)) {
 
 	$path = dirname($file);
 	$path =~ s{$source_dir/}{}g;
-	if ($path =~ /^\.$/) {
+	if ($path =~ /^\.\.$/) {
 		next;
 	}
 
