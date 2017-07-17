@@ -5,6 +5,7 @@ e.g. to remove the following lines from a file:
 file1.php
 
 ```php
+<?php
     echo "code before";
 
     for ($i = 0; ($i < 10); $i++) {
@@ -52,6 +53,7 @@ vim code_regex.txt
 file1.php
 
 ```php
+<?php
     echo "code before";
     echo "code after";
 ```
